@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-do Lista</title>
+  <style>
+    body{
+      font-family: Arial;
+      background: #0f172a;
+      color: white;
+      display:flex
+      justify-content center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .app {
+      background:  #1e293b;
+      padding: 20px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    input{
+      width: 70%;
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      background: #38bdf8;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0ea5e9;
+    }
+
+    ul {
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+      background: #334155;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    li:hover {
+      background: #4a71a8;
+    }
+    @media (max-width: 500px) {
+  .app {
+    width: 90%;
+    padding: 15px;
+  }
+
+  input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+  </style>
+</head>
+
+<body style="font-family: Arial, Helvetica, sans-serif;">
+
+  <h1>To-do Lista</h1>
+
+  
+  <ul id="lista"></ul>
+
+  <script src="lista.js"></script>
+
+  <div class="app">
+    <h1>To-Do lista</h1>
+
+    <input type="text" id="taskInput" placeholder="Upiši zadatak">
+    <button onclick="dodajTask()">Dodaj</button>
+    <button onclick="obrisiOznacene()">Obriši označene</button>
+    <ul id="lista"></ul>
+  </div>
+    
+
+  
+</body>
+</html>
